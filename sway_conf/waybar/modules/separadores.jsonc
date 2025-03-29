@@ -1,0 +1,33 @@
+{
+    "custom/separator#dot": {
+        "format": "",
+        "interval": "once",
+        "tooltip": false
+    },
+    "custom/separator#dot-line": {
+        "format": "",
+        "interval": "once",
+        "tooltip": false
+    },
+    "custom/separator_line": {
+        "format": " ",
+        "interval": "once",
+        "tooltip": false,
+        "color": "#ffcc66"
+    },
+    "custom/separator#blank": {
+        "format": "",
+        "interval": "once",
+        "tooltip": false
+    },
+    "custom/separator#blank_2": {
+        "format": "  ",
+        "interval": "once",
+        "tooltip": false
+    },
+    "custom/separator#blank_3": {
+        "format": "   ",
+        "interval": "once",
+        "tooltip": false
+    },
+}

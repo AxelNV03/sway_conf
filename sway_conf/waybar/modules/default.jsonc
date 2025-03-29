@@ -1,0 +1,115 @@
+{
+     "idle_inhibitor": { // previene que se apague la screen
+         "format": "{icon}",
+         "format-icons": {
+             "activated": "",
+             "deactivated": ""
+         }
+     },
+     "tray": { //applets
+         // "icon-size": 21,
+         "spacing": 10
+     },
+     "clock": {
+         "interval": 1,
+         // "format": " {:%I:%M %p}", // AM PM format
+         "format": "  {:%H:%M:%S}", // 24H
+         "format-alt": "  {:%H:%M   %Y, %d %B, %A}",
+         "tooltip-format": "<tt><small>{calendar}</small></tt>",
+         "calendar": {
+             "mode": "year",
+             "mode-mon-col": 3,
+             "weeks-pos": "right",
+             "on-scroll": 1,
+             "format": {
+                 "months": "<span color='#ffead3'><b>{}</b></span>",
+                 "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                 "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                 "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                 "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+             }
+         }
+     },
+     "cpu": {
+        "format": "{usage}% 󰍛",
+        "interval": 1,
+        "min-length": 5,
+        "format-alt-click": "click",
+        "format-alt": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% 󰍛",
+        "format-icons": [
+            "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"
+        ],
+        "on-click-right": "gnome-system-monitor",
+    },
+     "memory": {
+         "format": "{}% "
+     },
+
+     "temperature": {
+         "interval": 10,
+         "tooltip": true,
+         "hwmon-path": [
+             "/sys/class/hwmon/hwmon1/temp1_input",
+             "/sys/class/thermal/thermal_zone0/temp"
+         ],
+         //"thermal-zone": 0,
+         "critical-threshold": 82,
+         "format-critical": "{temperatureC}°C {icon}",
+         "format": "{temperatureC}°C {icon}",
+         "format-icons": [
+             "󰈸"
+         ],
+         "on-click-right": "kitty --title nvtop sh -c 'nvtop'"
+     },
+     
+     "backlight": {
+         // "device": "acpi_video1",
+         "format": "{percent}% {icon}",
+         "format-icons": ["", "", "", "", "", "", "", "", ""]
+     },
+     "battery": {
+         "states": {
+             // "good": 95,
+             "warning": 30,
+             "critical": 15
+         },
+         "interval" :1,
+         "format": "{capacity}% {icon}",
+         "format-full": "{capacity}% {icon}",
+         "format-charging": "{capacity}% ",
+         "format-plugged": "{capacity}% ",
+         "format-alt": "{time} {icon}",
+         // "format-good": "", // An empty format will hide the module
+         // "format-full": "",
+         "format-icons": ["", "", "", "", ""]
+     },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    "custom/power": {
+         "format" : "⏻ ",
+           "tooltip": false,
+           "menu": "on-click",
+           "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+           "menu-actions": {
+                "shutdown": "shutdown",
+                "reboot": "reboot",
+                "suspend": "systemctl suspend",
+                "hibernate": "systemctl hibernate"
+           }
+     },
+
+}

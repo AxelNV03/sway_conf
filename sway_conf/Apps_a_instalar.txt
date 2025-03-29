@@ -1,0 +1,24 @@
+WAYBAR 
+-------------------------------------------------------------
+git                 --> para clonar
+kitty               --> para el terminal, luego borras foot
+brave-bin           --> Navegador por  defecto
+rofi                --> sirve para mostrar las apps
+code                --> IDE desarrollo
+waybar              --> Stats
+cava                --> Visualizador de musica
+playerctl           --> controlador de multimedia
+ntfs-3g             --> Montar Windows
+                        |--> sudo mkdir -p /mnt/windows
+                        |--> sudo mount -t ntfs-3g /dev/nvme0n1p3 /mnt/windows
+
+
+NOTA: Instalar nerd-fonts para poder visualizar los pacmans
+
+
+APPS PARA DIARIO Y ESCUELA
+-------------------------------------------------------------
+whatsapp nativefier --> Mensajes
+Discord             --> Para novelas
+nvim                --> Falta practica
+
